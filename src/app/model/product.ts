@@ -1,4 +1,6 @@
-export class Product {
+import { Category } from './category';
+
+export class Product extends Category {
     id: number = 0;
     catId: string = '';
     name: string = '';
@@ -10,6 +12,7 @@ export class Product {
     active: boolean = true;
 
     constructor(properties?: Product) {
+        super();
         if (properties) {
             this.id = properties.id || 0;
             this.catId = properties.catId || '';
