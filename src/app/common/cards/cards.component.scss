@@ -1,0 +1,36 @@
+@use '../../../assets/modules/colors'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.card {
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  transition: all .2s ease-in-out;
+
+  &-title {
+    color: $clickme;
+    font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 4px rgb(0, 0, 0);
+  }
+
+  .btn-detail {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  .btn-detail:hover {
+    color: $clickme;
+  }
+}
+
+.card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+h2 {
+  color: $clickme;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  text-shadow: 2px 2px 4px rgb(0, 0, 0);
+}
