@@ -17,6 +17,7 @@ export class ConfigService {
     { text: 'Home', link: '/', icon: 'home' },
     { text: 'Premium', link: '/cat01' },
     { text: 'Hot', link: '/cat02' },
+    { text: 'Join the secret club', link: '#' },
   ];
 
   constructor() { }

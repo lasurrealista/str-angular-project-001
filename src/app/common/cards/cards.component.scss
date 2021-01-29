@@ -31,13 +31,13 @@
     width: 100%;
   }
 
-  @media (min-width: 580px) and (max-width: 960px) {
+  @media (min-width: 580px) and (max-width: 980px) {
     &-img-top {
       height: 17vw;
     }
   }
 
-  @media (min-width: 960px) {
+  @media (min-width: 980px) {
     &-img-top {
       height: 11vw;
     }
