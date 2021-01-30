@@ -1,0 +1,25 @@
+@use '../../assets/modules/colors'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.navbar {
+  background-color: $secondary-color;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  width: 100vw;
+
+  &-brand {
+    color: $primary-color;
+    font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+  }
+
+  .collapse ul li a {
+    color: $primary-color;
+  }
+
+  &-brand:hover,
+  .collapse ul li a:hover {
+    color: $clickme;
+  }
+}

@@ -11,12 +11,13 @@ export interface IMenuItem {
 })
 export class ConfigService {
 
-  appName: string = 'Sample Webshop';
+  appName: string = 'Swindler\'s Paradise';
 
   menuItems: IMenuItem[] = [
-    {text: 'Home', link: '/', icon: 'home'},
-    {text: 'Category01', link: '/cat01'},
-    {text: 'Category02', link: '/cat02'},
+    { text: 'Home', link: '/', icon: 'home' },
+    { text: 'Premium', link: '/cat01' },
+    { text: 'Hot', link: '/cat02' },
+    { text: 'Join the secret club', link: '#' },
   ];
 
   constructor() { }
