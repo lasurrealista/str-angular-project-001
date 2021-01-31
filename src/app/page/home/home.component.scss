@@ -56,11 +56,3 @@ h2 {
   font-weight: 600;
   text-shadow: 2px 2px 3px $secondary-color;
 }
-
-.btn-search {
-  background-color: $clickme;
-
-  &:hover {
-    color: $primary-color;
-  }
-}
