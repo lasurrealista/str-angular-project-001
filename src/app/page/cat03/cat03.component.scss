@@ -60,3 +60,15 @@ h2 {
   font-weight: 600;
   text-shadow: 2px 2px 3px $secondary-color;
 }
+
+h3 {
+  color: $secondary-color;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.couponCode {
+  border-radius: 5px;
+  border: 1px solid $secondary-color;
+}
