@@ -8,6 +8,7 @@ import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
 import { CardsComponent } from './common/cards/cards.component';
+import { Cat03Component } from './page/cat03/cat03.component';
 
 @NgModule({
   declarations: [
@@ -17,6 +18,7 @@ import { CardsComponent } from './common/cards/cards.component';
     Cat02Component,
     HomeComponent,
     CardsComponent,
+    Cat03Component,
   ],
   imports: [
     BrowserModule,
