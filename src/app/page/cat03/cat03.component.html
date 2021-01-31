@@ -1,0 +1,33 @@
+<div class="container">
+  <div class="col-12 py-4">
+    <h2 class="h4 py-4 text-center">Congratulations!</h2>
+    <h3 class="h5 text-center">You have located our secret offer.
+      <br>
+      Enter your coupon code below.
+    </h3>
+  </div>
+
+  <div class="col-12 pb-4 text-center">
+    <input type="text" class="couponCode">
+  </div>
+
+  <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
+    <ng-container *ngFor="let item of (cat01 ? cat01.slice(0,5):[])">
+      <div class="col mb-4">
+        <div class="card shadow text-center" style="width: auto">
+          <img [src]="item.image" class="card-img-top" alt="...">
+          <div class="card-body">
+            <h5 class="card-title">{{ item.name }}</h5>
+            <p class="card-text">{{ item.description }}
+            </p>
+            <p class="card-text">Price: {{ item.price }}
+            </p>
+            <p class="card-text">Available: {{ item.stock}}
+            </p>
+            <a href="#" class="btn btn-detail">Grab this one</a>
+          </div>
+        </div>
+      </div>
+    </ng-container>
+  </div>
+</div>

@@ -7,6 +7,9 @@ import { NavigationComponent } from './navigation/navigation.component';
 import { Cat01Component } from './page/cat01/cat01.component';
 import { Cat02Component } from './page/cat02/cat02.component';
 import { HomeComponent } from './page/home/home.component';
+import { CardsComponent } from './common/cards/cards.component';
+import { Cat03Component } from './page/cat03/cat03.component';
+import { ProductfilterPipe } from './pipe/productfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -14,7 +17,10 @@ import { HomeComponent } from './page/home/home.component';
     NavigationComponent,
     Cat01Component,
     Cat02Component,
-    HomeComponent
+    HomeComponent,
+    CardsComponent,
+    Cat03Component,
+    ProductfilterPipe,
   ],
   imports: [
     BrowserModule,

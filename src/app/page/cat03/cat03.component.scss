@@ -1,0 +1,74 @@
+@use '../../../assets/modules/colors'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.container {
+  height: 100vh;
+}
+
+.card {
+
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  transition: all .2s ease-in-out;
+
+  &-title {
+    color: $clickme;
+    font-family: 'Permanent Marker', Arial, Helvetica, sans-serif;
+    text-shadow: 2px 2px 3px $secondary-color;
+  }
+
+  .btn-detail {
+    background-color: $secondary-color;
+    color: $primary-color;
+  }
+
+  .btn-detail:hover {
+    color: $clickme;
+  }
+
+  &-img-top {
+    box-sizing: border-box;
+    border-radius: 13px;
+    padding: 0.5rem;
+    object-fit: cover;
+    width: 100%;
+  }
+
+  @media (min-width: 580px) and (max-width: 980px) {
+    &-img-top {
+      height: 17vw;
+    }
+  }
+
+  @media (min-width: 980px) {
+    &-img-top {
+      height: 11vw;
+    }
+  }
+
+}
+
+.card:hover {
+  opacity: 1;
+  transform: scale(1.1);
+}
+
+h2 {
+  color: $clickme;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-weight: 600;
+  text-shadow: 2px 2px 3px $secondary-color;
+}
+
+h3 {
+  color: $secondary-color;
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+  font-size: 1.2rem;
+  font-weight: 300;
+}
+
+.couponCode {
+  border-radius: 5px;
+  border: 1px solid $secondary-color;
+}

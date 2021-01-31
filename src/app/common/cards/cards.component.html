@@ -1,0 +1,43 @@
+<div class="container">
+  <div class="col-12 py-4">
+    <h2 class="h4 text-center">The Godfather's Picks</h2>
+  </div>
+
+  <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
+    <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(0,5):[])" >  
+    <div class="col mb-4">
+      <div class="card shadow text-center" style="width: auto">
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- A card title a 'name'-->
+          <h5 class="card-title">{{ item.name }}</h5>
+          <!-- A content title a 'description'-->
+          <p class="card-text">{{ item.description }}
+          </p>
+          <a href="#" class="btn btn-detail">Grab this one</a>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+  <div class="col-12 py-4">
+    <h2 class="h4 text-center">Explore our latest cars</h2>
+  </div>
+  <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
+    <ng-container *ngFor="let item of (listNonFeatured ? listNonFeatured.slice(0,5):[])" >  
+    <div class="col mb-4">
+      <div class="card shadow text-center" style="width: auto">
+        <img [src]="item.image" class="card-img-top" alt="...">
+        <div class="card-body">
+          <!-- A card title a 'name'-->
+          <h5 class="card-title">{{ item.name }}</h5>
+          <!-- A content title a 'description'-->
+          <p class="card-text">{{ item.description }}
+          </p>
+          <a href="#" class="btn btn-detail">Grab this one</a>
+        </div>
+      </div>
+    </div>
+    </ng-container>
+  </div>
+</div>

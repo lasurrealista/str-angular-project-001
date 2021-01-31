@@ -8,9 +8,9 @@ describe('Cat01Component', () => {
 
   beforeEach(async () => {
     await TestBed.configureTestingModule({
-      declarations: [ Cat01Component ]
+      declarations: [Cat01Component]
     })
-    .compileComponents();
+      .compileComponents();
   });
 
   beforeEach(() => {
