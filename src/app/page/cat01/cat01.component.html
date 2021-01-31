@@ -1,7 +1,7 @@
 <div class="container">
 
   <form class="form-inline my-2 my-lg-0">
-    <input (keyup)="onChangePhrase($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
+    <input class="form-control mr-sm-2" type="text" placeholder="Search">
     <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
   </form>
 
@@ -28,7 +28,11 @@
       </div>
     </ng-container>
   </div>
-  
+
+  <div class="col-12 py-4">
+    <h2 class="h4 text-center">Our premium cars</h2>
+  </div>
+
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
     <ng-container *ngFor="let item of (cat01 ? cat01 : [])">
       <div class="col mb-4">
@@ -48,6 +52,5 @@
       </div>
     </ng-container>
   </div>
-  
-  
+
 </div>
