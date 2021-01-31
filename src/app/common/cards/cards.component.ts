@@ -9,8 +9,8 @@ import { Product } from 'src/app/model/product';
 })
 export class CardsComponent extends ProductService implements OnInit {
 
-  listFeatured:Product[] = this.list.filter(e=>e.featured == true);
-  listNonFeatured:Product[] = this.list.filter(e=>e.featured == false);
+  listFeatured:Product[] = this.list.filter(e=>e.featured == true).sort( () => 0.5 - Math.random());
+  listNonFeatured:Product[] = this.list.filter(e=>e.featured == false).sort( () => 0.5 - Math.random());
   
   constructor() { super()}
 
