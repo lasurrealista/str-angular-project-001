@@ -9,6 +9,8 @@ import { Product } from '../../../../src/app/model/product';
 })
 export class Cat03Component extends ProductService implements OnInit {
 
+  cat01: Product[] = this.list.filter(item => item.catId === 'cat01').sort(() => 0.5 - Math.random());
+
   constructor() {
     super();
   }
