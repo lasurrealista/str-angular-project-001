@@ -9,10 +9,12 @@
         <div class="card shadow text-center" style="width: auto">
           <img [src]="item.image" class="card-img-top" alt="...">
           <div class="card-body">
-            <!-- A card title a 'name'-->
             <h5 class="card-title">{{ item.name }}</h5>
-            <!-- A content title a 'description'-->
             <p class="card-text">{{ item.description }}
+            </p>
+            <p class="card-text">Price: {{ item.price }}
+            </p>
+            <p class="card-text">Available: {{ item.stock}}
             </p>
             <a href="#" class="btn btn-detail">Grab this one</a>
           </div>

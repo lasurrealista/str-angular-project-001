@@ -19,4 +19,10 @@ export class HomeComponent extends ProductService implements OnInit {
   ngOnInit(): void {
   }
 
+  phrase: string = '';
+
+  onChangePhrase(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
+
 }
