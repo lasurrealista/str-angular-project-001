@@ -16,7 +16,6 @@ export class Cat02Component extends ProductService implements OnInit {
     super();
   }
 
-
   ngOnInit(): void {
   }
 
@@ -25,6 +24,12 @@ export class Cat02Component extends ProductService implements OnInit {
   searchEvent(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
     this.cat02Filter=this.list.filter(item => item.catId === 'cat02').filter(item=>item.name.toLowerCase().includes(this.phrase.toLowerCase()))
+  }
+
+  order: string = '';
+
+  orderItems(event) {
+    this.order = (event.target as HTMLInputElement).value;
   }
 
 }
