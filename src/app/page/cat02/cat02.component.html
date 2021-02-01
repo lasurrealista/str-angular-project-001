@@ -28,12 +28,19 @@
     <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
   </form>
 
+  <div class="col-5 mt-4 p-0">
+    <select (change)="orderItems($event)" class="form-control form-control mb-4">
+      <option value="none"></option>
+      <option value="a-z">A-Z</option>
+    </select>
+  </div>
+
   <div class="col-12 py-4">
     <h2 class="h4 text-center">Hot cars & cool rides</h2>
   </div>
 
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-    <ng-container *ngFor="let item of cat02 | productfilter: phrase">
+    <ng-container *ngFor="let item of cat02 | productfilter: phrase | productsort: order">
       <div class="col mb-4">
         <div class="card shadow text-center" style="width: auto">
           <img [src]="item.image" class="card-img-top" alt="...">

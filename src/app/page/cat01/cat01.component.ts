@@ -25,4 +25,10 @@ export class Cat01Component extends ProductService implements OnInit {
     this.phrase = (event.target as HTMLInputElement).value;
   }
 
+  order: string = '';
+
+  orderItems(event) {
+    this.order = (event.target as HTMLInputElement).value;
+  }
+
 }
