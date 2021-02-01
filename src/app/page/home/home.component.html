@@ -42,7 +42,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(6,11):[])">
+          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(5,11):[])">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -65,7 +65,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(12,17):[])">
+          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(11,16):[])">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -85,6 +85,53 @@
         </div>
 
       </div>
+
+      <div class="carousel-item">
+
+        <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
+          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(16,21):[])">
+            <div class="col my-4">
+              <div class="card shadow text-center" style="width: auto">
+                <img [src]="item.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }}</h5>
+                  <p class="card-text">{{ item.description }}
+                  </p>
+                  <p class="card-text">Price: {{ item.price }}
+                  </p>
+                  <p class="card-text">Available: {{ item.stock}}
+                  </p>
+                  <a href="#" class="btn btn-detail">Grab this one</a>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
+      <div class="carousel-item">
+
+        <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
+          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(21,25):[])">
+            <div class="col my-4">
+              <div class="card shadow text-center" style="width: auto">
+                <img [src]="item.image" class="card-img-top" alt="...">
+                <div class="card-body">
+                  <h5 class="card-title">{{ item.name }}</h5>
+                  <p class="card-text">{{ item.description }}
+                  </p>
+                  <p class="card-text">Price: {{ item.price }}
+                  </p>
+                  <p class="card-text">Available: {{ item.stock}}
+                  </p>
+                  <a href="#" class="btn btn-detail">Grab this one</a>
+                </div>
+              </div>
+            </div>
+          </ng-container>
+        </div>
+      </div>
+
     </div>
   </div>
 
