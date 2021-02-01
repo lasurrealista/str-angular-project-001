@@ -10,6 +10,7 @@ import { Product } from '../../../../src/app/model/product';
 export class Cat02Component extends ProductService implements OnInit {
 
   cat02: Product[] = this.list.filter(item => item.catId === 'cat02').sort(() => 0.5 - Math.random());
+  cat02Filter: Product[] = this.list.filter(item => item.catId === 'cat02');
 
   constructor() {
     super();
@@ -22,6 +23,7 @@ export class Cat02Component extends ProductService implements OnInit {
 
   searchEvent(event: Event): void {
     this.phrase = (event.target as HTMLInputElement).value;
+    this.cat02Filter=this.list.filter(item => item.catId === 'cat02').filter(item=>item.name.toLowerCase().includes(this.phrase.toLowerCase()))
   }
 
   order: string = '';
