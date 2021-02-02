@@ -14,11 +14,14 @@ export class ProductsortPipe implements PipeTransform {
 
     return list.sort((a, b) => {
 
-      if (order === 'a-z') {
+      if (order == 'price-up') {
+        return a.price - b.price;
+      } else if (order == 'price-down') {
+        return b.price - a.price;
+      } else if ('a-z') {
         return a.name.localeCompare(b.name);
-      };
+      }
 
     });
-
-  };
-};
+  }
+}
