@@ -18,7 +18,7 @@ export class ProductsortPipe implements PipeTransform {
         return a.price - b.price;
       } else if (order == 'price-down') {
         return b.price - a.price;
-      } else if ('a-z') {
+      } else if (order = 'a-z') {
         return a.name.localeCompare(b.name);
       }
 
