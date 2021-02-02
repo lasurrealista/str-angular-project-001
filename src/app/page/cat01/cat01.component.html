@@ -13,7 +13,7 @@
             <h5 class="card-title">{{ item.name }}</h5>
             <p class="card-text">{{ item.description }}
             </p>
-            <p class="card-text">Price: {{ item.price }}
+            <p class="card-text">phrasePrice: ${{ item.price }}
             </p>
             <p class="card-text">Available: {{ item.stock}}
             </p>
@@ -33,6 +33,8 @@
     <select (change)="orderItems($event)" class="form-control form-control mb-4">
       <option value="none"></option>
       <option value="a-z">A-Z</option>
+      <option value="price-up">Price: low to high</option>
+      <option value="price-down">Price: high to low</option>
     </select>
   </div>
 
@@ -49,7 +51,7 @@
             <h5 class="card-title">{{ item.name }}</h5>
             <p class="card-text">{{ item.description }}
             </p>
-            <p class="card-text">Price: {{ item.price }}
+            <p class="card-text">phrasePrice: ${{ item.price }}
             </p>
             <p class="card-text">Available: {{ item.stock}}
             </p>
