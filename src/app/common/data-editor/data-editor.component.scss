@@ -10,3 +10,12 @@
 .table {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
 }
+
+.btn-search {
+  background-color: $clickme;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+

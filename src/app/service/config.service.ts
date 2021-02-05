@@ -3,7 +3,7 @@ import { Injectable } from '@angular/core';
 export interface ITableCol {
   key: string,
   text: string,
-  editable: boolean,
+  editable?: boolean,
 }
 
 export interface IMenuItem {

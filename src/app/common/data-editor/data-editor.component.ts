@@ -34,4 +34,10 @@ export class DataEditorComponent implements OnInit {
   ngOnInit(): void {
   }
 
+  phrase: string = '';
+
+  searchEvent(event: Event): void {
+    this.phrase = (event.target as HTMLInputElement).value;
+  }
+
 }
