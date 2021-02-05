@@ -13,6 +13,17 @@ export class ConfigService {
 
   appName: string = 'Swindler\'s Paradise';
 
+  tableCols: ITableCol[] = [
+    {key: 'id', text: 'Id', editable: false},
+    {key: 'catId', text: 'Category Id', editable: true},
+    {key: 'name', text: 'Manufacturer', editable: true},
+    {key: 'description', text: 'Model', editable: true},
+    {key: 'price', text: 'Price', editable: true},
+    {key: 'stock', text: 'Stock', editable: true},
+    {key: 'featured', text: 'Featured', editable: true},
+    {key: 'active', text: 'Active', editable: true},
+  ];
+
   menuItems: IMenuItem[] = [
     { text: 'Home', link: '/', icon: 'home' },
     { text: 'Premium', link: '/cat01' },

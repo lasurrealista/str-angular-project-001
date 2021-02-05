@@ -12,6 +12,11 @@ import { Cat03Component } from './page/cat03/cat03.component';
 import { ProductfilterPipe } from './pipe/productfilter.pipe';
 import { ProductsortPipe } from './pipe/productsort.pipe';
 import { AdminComponent } from './page/admin/admin.component';
+import { DataEditorComponent } from './common/data-editor/data-editor.component';
+import { FormsModule } from '@angular/forms';
+import { ActionButtonComponent } from './common/action-button/action-button.component';
+import { ActionButtonGroupComponent } from './common/action-button-group/action-button-group.component';
+import { IconComponent } from './common/icon/icon.component';
 
 @NgModule({
   declarations: [
@@ -25,10 +30,15 @@ import { AdminComponent } from './page/admin/admin.component';
     ProductfilterPipe,
     ProductsortPipe,
     AdminComponent,
+    DataEditorComponent,
+    ActionButtonComponent,
+    ActionButtonGroupComponent,
+    IconComponent,
   ],
   imports: [
     BrowserModule,
-    AppRoutingModule
+    AppRoutingModule,
+    FormsModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
