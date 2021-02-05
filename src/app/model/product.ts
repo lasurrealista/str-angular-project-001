@@ -5,7 +5,7 @@ export class Product extends Category {
     catId: string = '';
     name: string = '';
     description: string = '';
-    image: string = '';
+    image?: string = '';
     price: number = 0;
     stock: number = 0;
     featured: boolean = false;
