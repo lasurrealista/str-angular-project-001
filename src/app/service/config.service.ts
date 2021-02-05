@@ -6,6 +6,12 @@ export interface ITableCol {
     editable?: boolean,
   }
 
+export interface IMenuItem {
+  text: string;
+  link: string;
+  icon?: string;
+}
+
 @Injectable({
   providedIn: 'root'
 })
