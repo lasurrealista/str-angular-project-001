@@ -47,7 +47,7 @@
 
 .card:hover {
   opacity: 1;
-  transform: scale(1.1);
+  transform: scale(1.05);
 }
 
 h2 {
@@ -55,4 +55,10 @@ h2 {
   font-family: 'Roboto', Arial, Helvetica, sans-serif;
   font-weight: 600;
   text-shadow: 2px 2px 3px $secondary-color;
+}
+
+.btn-floating {
+  color: $secondary-color;
+  font-size: 1.5rem;
+  padding: 1rem;
 }

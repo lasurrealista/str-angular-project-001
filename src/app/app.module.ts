@@ -10,6 +10,8 @@ import { HomeComponent } from './page/home/home.component';
 import { CardsComponent } from './common/cards/cards.component';
 import { Cat03Component } from './page/cat03/cat03.component';
 import { ProductfilterPipe } from './pipe/productfilter.pipe';
+import { ProductsortPipe } from './pipe/productsort.pipe';
+import { AdminComponent } from './page/admin/admin.component';
 
 @NgModule({
   declarations: [
@@ -21,6 +23,8 @@ import { ProductfilterPipe } from './pipe/productfilter.pipe';
     CardsComponent,
     Cat03Component,
     ProductfilterPipe,
+    ProductsortPipe,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
