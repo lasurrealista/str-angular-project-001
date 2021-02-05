@@ -1,10 +1,10 @@
 import { Injectable } from '@angular/core';
 
-export interface IMenuItem {
-  text: string;
-  link: string;
-  icon?: string;
-}
+export interface ITableCol {
+    key: string,
+    text: string,
+    editable?: boolean,
+  }
 
 @Injectable({
   providedIn: 'root'
