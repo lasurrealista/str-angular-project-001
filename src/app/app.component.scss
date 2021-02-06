@@ -1,0 +1,7 @@
+@use '../assets/modules/colors'as *;
+
+body {
+  background-color: $background-color;
+  height: 100%;
+  width: 100vw;
+}
