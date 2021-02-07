@@ -1,12 +1,17 @@
+import { HttpClient } from '@angular/common/http';
+import { getAllLifecycleHooks } from '@angular/compiler/src/lifecycle_reflector';
 import { Injectable } from '@angular/core';
+import { Observable } from 'rxjs';
 import { Product } from '../model/product';
 
 @Injectable({
   providedIn: 'root'
 })
 export class ProductService {
+  jsonUrl: string = "http://localhost:3000/products";
+  list: Product[] = [];
 
-  list: Product[] = [{
+  /*[{
     "id": 1,
     "catId": "cat01",
     "name": "Ferrari",
@@ -506,8 +511,21 @@ export class ProductService {
     "stock": 1,
     "featured": false,
     "active": false
-  },]
+  },] */
 
-  constructor() { }
+  constructor(
+    private http: HttpClient,
+  ) {
+    this.getAll();
+  }
 
+getAll() : Observable<Product[]> {
+  return this.http.get<Product[]>(this.jsonUrl);
+}
+
+/*getAll() : void {
+  this.http.get<Product[]>('http://localhost:3000/products')
+.subscribe ( products => {
+  this.list = products;
+}*/
 }
