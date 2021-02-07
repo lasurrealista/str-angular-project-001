@@ -1,0 +1,21 @@
+@use '../../../assets/modules/colors'as *;
+
+@import url('https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+.container {
+  width: 100vw;
+}
+
+.table {
+  font-family: 'Roboto', Arial, Helvetica, sans-serif;
+}
+
+.btn-search {
+  background-color: $clickme;
+
+  &:hover {
+    color: $primary-color;
+  }
+}
+

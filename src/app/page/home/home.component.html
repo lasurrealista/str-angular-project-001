@@ -18,7 +18,7 @@
       <div class="carousel-item active">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(0,5):[])">
+          <ng-container *ngFor="let item of productList$ | async | slice:0:7 | productfilter: 'featured':'true'">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -42,7 +42,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(5,10):[])">
+          <ng-container *ngFor="let item of productList$ | async | slice:8:15 | productfilter: 'featured':'true'">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -65,7 +65,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(10,15):[])">
+          <ng-container *ngFor="let item of productList$ | async | slice:16:27 | productfilter: 'featured':'true'">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -89,7 +89,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(15,20):[])">
+          <ng-container *ngFor="let item of productList$ | async | slice:28:38 | productfilter: 'featured':'true'">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -112,7 +112,7 @@
       <div class="carousel-item">
 
         <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-          <ng-container *ngFor="let item of (listFeatured ? listFeatured.slice(20,25):[])">
+          <ng-container *ngFor="let item of productList$ | async | slice:38:50 | productfilter: 'featured':'true'">
             <div class="col my-4">
               <div class="card shadow text-center" style="width: auto">
                 <img [src]="item.image" class="card-img-top" alt="...">
@@ -139,7 +139,7 @@
     <h2 class="h4 text-center">Explore our latest cars</h2>
   </div>
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-    <ng-container *ngFor="let item of (listNonFeatured ? listNonFeatured.slice(0,5):[])">
+    <ng-container *ngFor="let item of productList$ | async | slice:0:5">
       <div class="col mb-4">
         <div class="card shadow text-center" style="width: auto">
           <img [src]="item.image" class="card-img-top" alt="...">

@@ -12,7 +12,7 @@
   </div>
 
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-    <ng-container *ngFor="let item of (cat01 ? cat01.slice(0,5):[])">
+    <ng-container *ngFor="let item of productList$ | async | slice: 5:10">
       <div class="col mb-4">
         <div class="card shadow text-center" style="width: auto">
           <img [src]="item.image" class="card-img-top" alt="...">
