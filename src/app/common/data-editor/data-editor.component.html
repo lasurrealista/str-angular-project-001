@@ -18,9 +18,14 @@
                 <input [(ngModel)]="product[col.key]" class="input-group" type="text">
               </td>
               <td>
-                <app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()"
+                <div class="btn-group">
+                  <button (click)="onUpdate(product)" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                  <button (click)="onDelete(product)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                </div>
+                <!-- Evelin verziója lent, kikommentelve-->
+            <!--<app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()"
                   (deleteClick)="onDeleteClicked()">
-                </app-action-button-group>
+                </app-action-button-group> -->
               </td>
             </tr>
           </tbody>

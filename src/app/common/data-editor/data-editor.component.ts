@@ -15,7 +15,7 @@ export class DataEditorComponent implements OnInit {
   cols: ITableCol[] = this.config.tableCols;
   col: Product = new Product();
 
-  productList$: Observable<Product[]> = this.productService.getAll();
+  
 
   @Output() selectClick: EventEmitter<Product> = new EventEmitter();
   @Output() updateClick: EventEmitter<Product> = new EventEmitter();
@@ -34,6 +34,11 @@ export class DataEditorComponent implements OnInit {
   }
 
   constructor(private config: ConfigService, private productService: ProductService) { }
+
+  // Feri verzió
+  productList$: Observable<Product[]> = this.productService.getAll();
+  onUpdate(product:any):void{this.productService.updateProduct(product).subscribe(e=>console.log(e))}
+  onDelete(product:any):void{this.productService.deleteProduct(product).subscribe(e=>console.log(e))}
 
   ngOnInit(): void {
   }
