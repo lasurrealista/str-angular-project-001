@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ProductService } from '../../service/product.service';
 import { Product } from '../../../../src/app/model/product';
+import { HttpClient } from '@angular/common/http';
 
 @Component({
   selector: 'app-cat01',
@@ -11,7 +12,9 @@ export class Cat01Component extends ProductService implements OnInit {
 
   cat01: Product[] = this.list.filter(item => item.catId === 'cat01').sort(() => 0.5 - Math.random());
 
-  constructor() {
+  constructor(
+    http: HttpClient,
+  ) {
     super();
   }
 
