@@ -5,15 +5,15 @@ import { Pipe, PipeTransform } from '@angular/core';
 })
 export class ProductfilterPipe implements PipeTransform {
 
-  transform(list: any[], phrase: string): any[] {
-    if (!Array.isArray(list) || !phrase) {
+  transform(list: any[], key: string, phrase: string): any[] {
+    if (!Array.isArray(list) || !phrase || !key) {
       return list;
     }
 
     phrase = phrase.toLocaleLowerCase();
 
     return list.filter((item) => {
-      return item.name.toLocaleLowerCase().includes(phrase);
+      return ('' + item[key]).toLocaleLowerCase().includes(phrase);
     });
 
   }

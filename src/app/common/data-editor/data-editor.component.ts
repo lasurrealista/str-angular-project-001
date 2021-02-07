@@ -3,6 +3,7 @@ import { ConfigService } from 'src/app/service/config.service';
 import { ITableCol } from 'src/app/service/config.service';
 import { Product } from '../../../../src/app/model/product';
 import { ProductService } from '../../../../src/app/service/product.service';
+import { Observable } from 'rxjs';
 
 @Component({
   selector: 'app-data-editor',
