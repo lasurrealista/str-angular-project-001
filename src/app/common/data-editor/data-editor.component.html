@@ -13,10 +13,9 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let product of productList$ | async | productfilter: phrase">
-              <td *ngFor="let col of cols" class="pt-2">
-                <input [(ngModel)]="product[col.key]" class="input-group" type="text">
-              </td>
+            <tr>
+              <td class="pt-2" *ngFor="let col of cols | productfilter: phrase ">
+                <input class="input-group" type="text">
               <td>
                 <app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()"
                   (deleteClick)="onDeleteClicked()">

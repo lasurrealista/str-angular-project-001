@@ -14,7 +14,7 @@ export class DataEditorComponent implements OnInit {
   cols: ITableCol[] = this.config.tableCols;
   col: Product = new Product();
 
-  productList$: Observable<Product[]> = this.productService.getAll();
+  //productList$: Observable<Product[]> = this.productService.getAll();
 
   @Output() selectClick: EventEmitter<Product> = new EventEmitter();
   @Output() updateClick: EventEmitter<Product> = new EventEmitter();
