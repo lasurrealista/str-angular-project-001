@@ -1,6 +1,5 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
-import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -18,7 +17,6 @@ import { FormsModule } from '@angular/forms';
 import { ActionButtonComponent } from './common/action-button/action-button.component';
 import { ActionButtonGroupComponent } from './common/action-button-group/action-button-group.component';
 import { IconComponent } from './common/icon/icon.component';
-import { ProductService } from './service/product.service';
 
 @NgModule({
   declarations: [
@@ -41,9 +39,8 @@ import { ProductService } from './service/product.service';
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    HttpClientModule,
   ],
-  providers: [ProductService],
+  providers: [],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
