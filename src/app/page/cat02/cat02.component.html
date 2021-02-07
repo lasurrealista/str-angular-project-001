@@ -4,7 +4,8 @@
     <h2 class="h4 text-center">Hot</h2>
   </div>
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
-    <ng-container *ngFor="let item of (cat02 ? cat02.slice(0,5):[])">
+    <ng-container
+      *ngFor="let item of productList$ | async | productfilter:'catId':2 | slice: 0:10 | productfilter:'featured': 'true'">
       <div class="col mb-4">
         <div class="card shadow text-center" style="width: auto">
           <img [src]="item.image" class="card-img-top" alt="...">
@@ -43,7 +44,8 @@
 
   <div class="row row-featured row-cols-1 row-cols-sm-2 row-cols-lg-5 justify-content-around">
 
-    <ng-container *ngFor="let item of productList$ | async | productfilter: phrase | productsort: order">
+    <ng-container
+      *ngFor="let item of productList$ | async | productfilter: phrase | productfilter:'catId':2 | productsort: order">
 
       <div class="col mb-4">
         <div class="card shadow text-center" style="width: auto">

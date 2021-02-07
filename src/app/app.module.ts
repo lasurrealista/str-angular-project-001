@@ -19,6 +19,7 @@ import { ActionButtonComponent } from './common/action-button/action-button.comp
 import { ActionButtonGroupComponent } from './common/action-button-group/action-button-group.component';
 import { IconComponent } from './common/icon/icon.component';
 import { ProductService } from './service/product.service';
+import { CategoryfilterPipe } from './pipe/categoryfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -36,6 +37,7 @@ import { ProductService } from './service/product.service';
     ActionButtonComponent,
     ActionButtonGroupComponent,
     IconComponent,
+    CategoryfilterPipe,
   ],
   imports: [
     BrowserModule,

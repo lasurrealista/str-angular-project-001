@@ -3,6 +3,8 @@ import { ProductService } from '../../service/product.service';
 import { Product } from '../../../../src/app/model/product';
 import { HttpClient } from '@angular/common/http';
 import { Observable } from 'rxjs';
+import { Category } from 'src/app/model/category';
+import { CategoryService } from '../../service/category.service';
 
 @Component({
   selector: 'app-cat01',
@@ -16,7 +18,7 @@ export class Cat01Component extends ProductService implements OnInit {
   productList$: Observable<Product[]> = this.productService.getAll();
 
   constructor(
-    http: HttpClient, public productService: ProductService
+    http: HttpClient, public productService: ProductService, public categoryService: CategoryService
   ) {
     super(http);
   }
@@ -37,4 +39,6 @@ export class Cat01Component extends ProductService implements OnInit {
     this.order = (event.target as HTMLInputElement).value;
   }
 
+  id: number = 1;
+  categoryList: Category[] = this.categoryService.list;
 }
