@@ -3,7 +3,7 @@
     <div class="col-12">
       <form class="form-inline my-2 my-lg-0 py-2">
         <input (keyup)="searchEvent($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-search my-2 my-sm-0" type="submit">Search Manufacturer</button>
       </form>
       <div class="table-responsive-sm">
         <table class="table table-striped table-dark table-bordered table-hover table-sm">
@@ -13,7 +13,7 @@
             </tr>
           </thead>
           <tbody>
-            <tr *ngFor="let product of productList$ | async | productfilter: phrase">
+            <tr *ngFor="let product of productList$ | async | productfilter:'name':phrase">
               <td *ngFor="let col of cols" class="pt-2">
                 <input [(ngModel)]="product[col.key]" class="input-group" type="text">
               </td>
