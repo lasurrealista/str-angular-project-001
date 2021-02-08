@@ -3,7 +3,7 @@
     <div class="col-12">
       <form class="form-inline my-2 my-lg-0 py-2">
         <input (keyup)="searchEvent($event)" class="form-control mr-sm-2" type="text" placeholder="Search">
-        <button class="btn btn-search my-2 my-sm-0" type="submit">Search</button>
+        <button class="btn btn-search my-2 my-sm-0" type="submit">Search by Manufacturer</button>
       </form>
       <div class="table-responsive-sm">
         <table class="table table-striped table-dark table-bordered table-hover table-sm">
@@ -13,13 +13,21 @@
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td class="pt-2" *ngFor="let col of cols | productfilter: phrase ">
-                <input class="input-group" type="text">
+            <tr *ngFor="let product of productList$ | async | productfilter:'name':phrase">
+              <td *ngFor="let col of cols" class="pt-2">
+                <input *ngIf="col.editable" [(ngModel)]="product[col.key]" class="input-group" type="text">
+                <span *ngIf="!col.editable">{{ product[col.key] }}</span>
+              </td>
               <td>
-                <app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()"
+                <div class="btn-group">
+                  <button class="btn btn-info"><i class="fa fa-eye"></i></button>
+                  <button (click)="onUpdate(product)" class="btn btn-primary"><i class="fa fa-refresh"></i></button>
+                  <button (click)="onDelete(product)" class="btn btn-danger"><i class="fa fa-trash"></i></button>
+                </div>
+                <!-- Evelin verziója lent, kikommentelve-->
+                <!--<app-action-button-group (selectClick)="onSelectClicked()" (updateClick)="onUpdateClicked()"
                   (deleteClick)="onDeleteClicked()">
-                </app-action-button-group>
+                </app-action-button-group> -->
               </td>
             </tr>
           </tbody>

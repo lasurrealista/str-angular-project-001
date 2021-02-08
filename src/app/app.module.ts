@@ -17,6 +17,8 @@ import { FormsModule } from '@angular/forms';
 import { ActionButtonComponent } from './common/action-button/action-button.component';
 import { ActionButtonGroupComponent } from './common/action-button-group/action-button-group.component';
 import { IconComponent } from './common/icon/icon.component';
+import { ProductService } from './service/product.service';
+import { CategoryfilterPipe } from './pipe/categoryfilter.pipe';
 
 @NgModule({
   declarations: [
@@ -34,6 +36,7 @@ import { IconComponent } from './common/icon/icon.component';
     ActionButtonComponent,
     ActionButtonGroupComponent,
     IconComponent,
+    CategoryfilterPipe,
   ],
   imports: [
     BrowserModule,

@@ -510,4 +510,24 @@ export class ProductService {
 
   constructor() { }
 
+<<<<<<< HEAD
+=======
+getAll() : Observable<Product[]> {
+  return this.http.get<Product[]>(this.jsonUrl)}
+
+// Feri verzió
+updateProduct(product:any):Observable<any>{
+  return this.http.put(`${this.jsonUrl}/${product.id}`, product)}
+deleteProduct(product:any):Observable<any>{
+  product = product.id?product.id:product;
+  return this.http.delete(`${this.jsonUrl}/${product}`)}
+
+
+
+/*getAll() : void {
+  this.http.get<Product[]>('http://localhost:3000/products')
+.subscribe ( products => {
+  this.list = products;
+}*/
+>>>>>>> main
 }
