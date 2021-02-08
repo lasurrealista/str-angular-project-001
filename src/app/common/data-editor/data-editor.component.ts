@@ -16,7 +16,8 @@ export class DataEditorComponent implements OnInit {
   cols: ITableCol[] = this.config.tableCols;
   col: Product = new Product();
 
-  
+  filterKey: string = '';
+  filterKeys: string[] = Object.keys(new Product());
 
   @Output() selectClick: EventEmitter<Product> = new EventEmitter();
   @Output() updateClick: EventEmitter<Product> = new EventEmitter();
@@ -39,7 +40,7 @@ export class DataEditorComponent implements OnInit {
   // Feri verzió
   productList$: Observable<Product[]> = this.productService.getAll();
   onUpdate(product:any):void{this.productService.updateProduct(product).subscribe(e=>alert("Product refreshed!")) }
-  onDelete(product:any):void{this.productService.deleteProduct(product).subscribe(e=>alert("Product deleted!")); 
+  onDelete(product:any):void{this.productService.deleteProduct(product).subscribe(e=>alert("Product deleted!"));
   this.router.routeReuseStrategy.shouldReuseRoute = () => false; this.router.onSameUrlNavigation='reload'; this.router.navigate(['/admin'])}
 
   ngOnInit(): void {
