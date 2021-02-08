@@ -510,8 +510,6 @@ export class ProductService {
 
   constructor() { }
 
-<<<<<<< HEAD
-=======
 getAll() : Observable<Product[]> {
   return this.http.get<Product[]>(this.jsonUrl)}
 
@@ -529,5 +527,4 @@ deleteProduct(product:any):Observable<any>{
 .subscribe ( products => {
   this.list = products;
 }*/
->>>>>>> main
 }
