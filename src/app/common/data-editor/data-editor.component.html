@@ -15,7 +15,8 @@
           <tbody>
             <tr *ngFor="let product of productList$ | async | productfilter:'name':phrase">
               <td *ngFor="let col of cols" class="pt-2">
-                <input [(ngModel)]="product[col.key]" class="input-group" type="text">
+                <input *ngIf="col.editable" [(ngModel)]="product[col.key]" class="input-group" type="text">
+                <span *ngIf="!col.editable">{{ product[col.key] }}</span>
               </td>
               <td>
                 <div class="btn-group">
