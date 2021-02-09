@@ -42,7 +42,7 @@
           </thead>
           <tbody>
             <tr
-              *ngFor="let product of productList$ | async | productfilter: filterKey:phrase | slice:pageSliceStart:pageSliceEnd">
+              *ngFor="let product of productList$ | async | productfilter: filterKey:phrase:productsProperties | slice:pageSliceStart:pageSliceEnd">
               <td *ngFor="let col of cols" class="pt-2">
                 <input *ngIf="col.editable" [(ngModel)]="product[col.key]" class="input-group" type="text">
                 <span *ngIf="!col.editable">{{ product[col.key] }}</span>
