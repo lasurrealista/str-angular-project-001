@@ -19,7 +19,7 @@ export class ProductfilterPipe implements PipeTransform {
   }
 */
 
-  transform(list: any[], key: string, phrase: string): any[] {
+  transform(list: any[] | null, key: string, phrase: string): any[] | null {
     if (!Array.isArray(list) || !phrase || !key) {
       return list;
     }
@@ -33,5 +33,4 @@ export class ProductfilterPipe implements PipeTransform {
       return ('' + item[key]).toLocaleLowerCase().includes(phrase);
     });
     }
-
   }
