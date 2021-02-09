@@ -181,4 +181,11 @@ A Bootstrap keretrendszert és a FontAwesom ikonokat előre telepítettem és be
   az id alapján meg tudjuk határoni, hogy a szerver melyiket frissítse vagy
   törölje.
 
+## Extrák
+
+Az admin oldalon a táblázat alatt vagy felett legyen egy lapozó, és ne az összes termék jelenjen meg egyszerre, csak egy oldalnyi.
+A szűrés az admin oldalon ne csak névre működjön, hanem a termékek többi adatára is lehessen szűrni.
+Az admin oldalon a táblázatban az adatokat lehessen az összes oszlop szerint rendezni. (elég csak növekvő sorrendben, de plusz pont, ha lehet az irányt is változtatni)
+Az admin oldalon lehessen új termékeket is felvenni az adatbázisba.
+
 ## Sok sikert!
