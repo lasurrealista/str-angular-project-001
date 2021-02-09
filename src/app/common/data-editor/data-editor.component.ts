@@ -44,7 +44,7 @@ export class DataEditorComponent implements OnInit {
 
   // Feri verzió
   productList$: Observable<Product[]> = this.productService.getAll().pipe(
-    tap( products => this.productsNum = products.length )
+    tap( products => this.productsProperties.count = products.length )
   );
   onUpdate(product:any):void{this.productService.updateProduct(product).subscribe(e=>alert("Product refreshed!")) }
   onDelete(product:any):void{this.productService.deleteProduct(product).subscribe(e=>alert("Product deleted!"));
@@ -59,13 +59,15 @@ export class DataEditorComponent implements OnInit {
     this.phrase = (event.target as HTMLInputElement).value;
   }
 
-  productsNum: number = 0;
+  productsProperties: {count: number} = {
+    count: 0,
+  };
   pageSize: number = 10;
   pageStart: number = 1;
   currentPage: number = 1;
   get paginator(): IPageBtn[] {
     const pages: IPageBtn[] = [];
-    for (let i = 0; i < this.productsNum / this.pageSize && pages.length < 10; i++ ) {
+    for (let i = 0; i < this.productsProperties.count / this.pageSize && pages.length < 10; i++ ) {
       const page = this.pageStart + i;
       pages.push({page});
     }

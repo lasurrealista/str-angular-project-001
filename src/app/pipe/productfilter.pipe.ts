@@ -19,12 +19,14 @@ export class ProductfilterPipe implements PipeTransform {
   }
 */
 
-  transform(list: any[] | null, key: string, phrase: string): any[] | null {
+  transform(list: any[] | null, key: string,
+    phrase: string | number |boolean,
+    props?: { count: number} ): any[] | null {
     if (!Array.isArray(list) || !phrase || !key) {
       return list;
     }
 
-    return list.filter( item => {
+    const filtered = list.filter( item => {
       if (typeof item[key] === 'number' && typeof phrase === 'number') {
         return item[key] === phrase;
       }
@@ -32,5 +34,10 @@ export class ProductfilterPipe implements PipeTransform {
       phrase = ('' + phrase).toLocaleLowerCase();
       return ('' + item[key]).toLocaleLowerCase().includes(phrase);
     });
+
+    if (props?.count) {
+      props.count = filtered.length;
+    }
+    return filtered;
     }
   }
